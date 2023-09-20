@@ -16,9 +16,9 @@ const handleResponse = (res, message) => {
 
 // Registra un usuario
 const register = (req, res) => {
-  const { id_user, email, name_user, lastName, password, rol} = req.body;
 
-  userRepository.addUser(id_user, email, name_user, lastName, password, rol, (error, valid) => {
+
+  userRepository.addUser(req.body, (error, valid) => {
     if (valid) {
       res.status(400).json({ status: 'Registro fallido' });
     } else {
