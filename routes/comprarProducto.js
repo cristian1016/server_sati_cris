@@ -5,7 +5,7 @@ const ValidateAdmin = require('../middleware/ValidateAdmin')
 
 
 //Permite realizar la compra de un producto ad.
-router.post('/', productController.comprarProducto, ValidateAdmin.njwtAuth);
+router.post('/', productController.comprarProducto);
 
 
 

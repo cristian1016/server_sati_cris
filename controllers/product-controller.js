@@ -33,7 +33,7 @@ const addProduct = (req, res) => {
 
 // Actualiza un producto utilizando los datos proporcionados en el cuerpo de la solicitud y responde con un mensaje de éxito
 const updateAProduct = (req, res) => {
-  ValidateAdmin.njwtAuth(req,res,null)
+  // ValidateAdmin.njwtAuth(req,res,null)
   ProductRepository.updateProduct(req.body, handleResponse(res, "Producto actualizado correctamente"));
 };
 

@@ -4,7 +4,7 @@ const router = express.Router();
 const ValidateAdmin = require('../middleware/ValidateAdmin')
 
 //Ruta para eliminar un producto. ad.
-router.delete('/', productController.deleteAProduct, ValidateAdmin.njwtAuth);
+router.delete('/', ValidateAdmin.njwtAuth, productController.deleteAProduct);
 
 
 module.exports = router; 
